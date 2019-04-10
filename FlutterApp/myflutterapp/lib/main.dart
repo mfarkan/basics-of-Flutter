@@ -4,10 +4,8 @@ import './homePage/firstPage.dart';
 import './homePage/hello.dart';
 import './homePage/columns.dart';
 import './homePage/scaffold.dart';
+import './homePage/statelessOrFull.dart';
 
 void main() {
-  runApp(new MaterialApp(
-    title: 'Scaffold Application',
-    home: new ScaffoldBasics(),
-  ));
+  runApp(new WithoutState());
 }

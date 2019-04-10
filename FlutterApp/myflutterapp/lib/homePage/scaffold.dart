@@ -24,12 +24,19 @@ class ScaffoldBasics extends StatelessWidget {
           ),
         ],
       ),
-      body: new Container(
-        child: new Center(
-          child: new Text(
-            'Hello Scaffold <3',
-            textDirection: TextDirection.ltr,
-          ),
+      body: new Center(
+        child: new GridView.count(
+          crossAxisCount: 3,
+          crossAxisSpacing: 10.0,
+          padding: const EdgeInsets.all(20),
+          children: <Widget>[
+            const Text('He\'d have you all unravel at the'),
+            const Text('Heed not the rabble'),
+            const Text('Sound of screams but the'),
+            const Text('Who scream'),
+            const Text('Revolution is coming...'),
+            const Text('Revolution, they...'),
+          ],
         ),
       ),
       bottomNavigationBar: new BottomNavigationBar(
@@ -42,7 +49,51 @@ class ScaffoldBasics extends StatelessWidget {
           new BottomNavigationBarItem(
               icon: new Icon(Icons.update), title: new Text("Update")),
         ],
-        onTap: (int index) => print('$index'),
+        onTap: (int index) {
+          switch (index) {
+            case 0:
+              print('Tıkladığınız button add Butonudur.');
+              break;
+            case 1:
+              print('Tıkladığınız button delete Butonudur.');
+              break;
+            case 2:
+              print('Tıkladığınız button update Butonudur.');
+              break;
+            default:
+              print('default');
+              break;
+          }
+        },
+      ),
+      drawer: new Drawer(
+        child: new ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            new DrawerHeader(
+              child: new Text('Murat Fatih ARKAN'),
+              decoration: new BoxDecoration(
+                color: Colors.blue,
+              ),
+            ),
+            new ListTile(
+              title: new Text('First Item of List'),
+              subtitle: new Text('Subtitle of Item one'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+              trailing: Icon(Icons.arrow_forward),
+            ),
+            new ListTile(
+              trailing: Icon(Icons.arrow_forward),
+              title: new Text('Second Item of List'),
+              subtitle: new Text('Subtitle of Item two'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            )
+          ],
+        ),
       ),
     );
   }
