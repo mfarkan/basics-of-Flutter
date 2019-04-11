@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+//appBar olmadığı için geri dönüş için ilgili ok çıkmaz.
 class HelloWorld extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

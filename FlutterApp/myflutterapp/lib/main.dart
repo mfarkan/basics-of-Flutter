@@ -7,5 +7,13 @@ import './homePage/scaffold.dart';
 import './homePage/statelessOrFull.dart';
 
 void main() {
-  runApp(new WithoutState());
+  runApp(new MaterialApp(
+    initialRoute: '/',
+    routes: {
+      '/': (context) => new ScaffoldBasics(),
+      '/first-page': (context) => new MyHomePage(),
+      '/hello': (context) => new HelloWorld(),
+      '/WithState': (context) => new WithState()
+    },
+  ));
 }

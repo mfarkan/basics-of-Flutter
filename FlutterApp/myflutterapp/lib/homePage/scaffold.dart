@@ -11,7 +11,7 @@ class ScaffoldBasics extends StatelessWidget {
         actions: <Widget>[
           IconButton(
               icon: Icon(Icons.save),
-              onPressed: () => print('Hello'),
+              onPressed: () => {Navigator.pushNamed(context, '/first-page')},
               tooltip: 'Saving'),
           IconButton(
               icon: Icon(Icons.hearing),
@@ -30,12 +30,29 @@ class ScaffoldBasics extends StatelessWidget {
           crossAxisSpacing: 10.0,
           padding: const EdgeInsets.all(20),
           children: <Widget>[
-            const Text('He\'d have you all unravel at the'),
-            const Text('Heed not the rabble'),
-            const Text('Sound of screams but the'),
-            const Text('Who scream'),
-            const Text('Revolution is coming...'),
-            const Text('Revolution, they...'),
+            new GestureDetector(
+              onTap: () => Navigator.pushNamed(context, '/first-page'),
+              child: new Container(
+                alignment: Alignment.center,
+                child: new Text('''One Click
+              Go To First Page'''),
+              ),
+            ),
+            new GestureDetector(
+                onDoubleTap: () => Navigator.pushNamed(context, '/hello'),
+                child: new Container(
+                    alignment: Alignment.center, child: new Text('''Double Click
+              Go To Hello Page ''')
+                )
+              ),
+            new GestureDetector(
+              onLongPress: () => Navigator.pushNamed(context, '/WithState'),
+              child: new Container(
+                alignment: Alignment.center,
+                child: new Text('''Long Click
+              Go To WithState Page'''),
+              ),
+            )
           ],
         ),
       ),
