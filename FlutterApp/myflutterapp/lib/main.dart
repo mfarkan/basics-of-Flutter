@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import './homePage/rows.dart';
-import './homePage/firstPage.dart';
-import './homePage/hello.dart';
-import './homePage/columns.dart';
-import './homePage/scaffold.dart';
-import './homePage/statelessOrFull.dart';
+import './screens/rows.dart';
+import './screens/firstPage.dart';
+import './screens/hello.dart';
+import './screens/columns.dart';
+import './screens/scaffold.dart';
+import './screens/statelessOrFull.dart';
 
 void main() {
   runApp(new MaterialApp(

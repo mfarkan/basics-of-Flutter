@@ -33,18 +33,27 @@ class ScaffoldBasics extends StatelessWidget {
             new GestureDetector(
               onTap: () => Navigator.pushNamed(context, '/first-page'),
               child: new Container(
-                alignment: Alignment.center,
-                child: new Text('''One Click
-              Go To First Page'''),
-              ),
+                  decoration: new BoxDecoration(
+                    image: new DecorationImage(
+                        image: new NetworkImage(
+                            'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0Bx4BSt6jniD7T0hfM01sSmRyTG8/layout_structure_regions_mobile.png'),
+                        fit: BoxFit.cover),
+                  ),
+                  alignment: Alignment.bottomCenter,
+                  child: new Transform(
+                      alignment: Alignment.bottomCenter,
+                      transform: new Matrix4.skewY(0.0)..rotateZ(0),
+                      child: new Container(
+                        padding: EdgeInsets.all(8),
+                        color: Color(0xFFA4B0BD),
+                        child: new Text('One click Go To First Page'),
+                      ))),
             ),
             new GestureDetector(
                 onDoubleTap: () => Navigator.pushNamed(context, '/hello'),
                 child: new Container(
                     alignment: Alignment.center, child: new Text('''Double Click
-              Go To Hello Page ''')
-                )
-              ),
+              Go To Hello Page '''))),
             new GestureDetector(
               onLongPress: () => Navigator.pushNamed(context, '/WithState'),
               child: new Container(
