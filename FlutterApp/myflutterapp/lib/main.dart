@@ -7,6 +7,7 @@ import './screens/hello.dart';
 import './screens/columns.dart';
 import './screens/scaffold.dart';
 import './screens/statelessOrFull.dart';
+import './screens/alertTextField.dart';
 
 void main() {
   runApp(new MaterialApp(
@@ -17,7 +18,8 @@ void main() {
       '/hello': (context) => new HelloWorld(),
       '/WithState': (context) => new WithState(),
       '/imageView': (context) => new ImageViews(),
-      '/ToastSample': (context) => new ToastSample()
+      '/ToastSample': (context) => new ToastSample(),
+      '/AlertText':(context)=>new AlertTextField(),
     },
   ));
 }

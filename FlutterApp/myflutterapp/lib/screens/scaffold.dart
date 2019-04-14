@@ -72,11 +72,11 @@ class ScaffoldBasics extends StatelessWidget {
               ),
             ),
             new GestureDetector(
-              onDoubleTap: () => Navigator.pushNamed(context, '/hello'),
+              onDoubleTap: () => Navigator.pushNamed(context, '/AlertText'),
               child: new Container(
                 alignment: Alignment.center,
                 child: new Text('''Double Click
-              Go To Hello Page '''),
+              Go To Alert Page '''),
               ),
             ),
             new GestureDetector(
