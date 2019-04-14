@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import './screens/toastMessage.dart';
+import './screens/imageViews.dart';
 import './screens/rows.dart';
 import './screens/firstPage.dart';
 import './screens/hello.dart';
@@ -13,7 +15,9 @@ void main() {
       '/': (context) => new ScaffoldBasics(),
       '/first-page': (context) => new MyHomePage(),
       '/hello': (context) => new HelloWorld(),
-      '/WithState': (context) => new WithState()
+      '/WithState': (context) => new WithState(),
+      '/imageView': (context) => new ImageViews(),
+      '/ToastSample': (context) => new ToastSample()
     },
   ));
 }

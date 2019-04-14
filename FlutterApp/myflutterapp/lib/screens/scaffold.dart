@@ -33,29 +33,54 @@ class ScaffoldBasics extends StatelessWidget {
             new GestureDetector(
               onTap: () => Navigator.pushNamed(context, '/first-page'),
               child: new Container(
-                  decoration: new BoxDecoration(
-                    image: new DecorationImage(
-                        image: new NetworkImage(
-                            'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0Bx4BSt6jniD7T0hfM01sSmRyTG8/layout_structure_regions_mobile.png'),
-                        fit: BoxFit.cover),
-                  ),
+                decoration: new BoxDecoration(
+                  image: new DecorationImage(
+                      image: new NetworkImage(
+                          'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0Bx4BSt6jniD7T0hfM01sSmRyTG8/layout_structure_regions_mobile.png'),
+                      fit: BoxFit.cover),
+                ),
+                alignment: Alignment.bottomCenter,
+                child: new Transform(
                   alignment: Alignment.bottomCenter,
-                  child: new Transform(
-                      alignment: Alignment.bottomCenter,
-                      transform: new Matrix4.skewY(0.0)..rotateZ(0),
-                      child: new Container(
-                        padding: EdgeInsets.all(8),
-                        color: Color(0xFFA4B0BD),
-                        child: new Text('One click Go To First Page'),
-                      ))),
+                  transform: new Matrix4.skewY(0.0)..rotateZ(0),
+                  child: new Container(
+                    padding: EdgeInsets.all(8),
+                    color: Color(0xFFA4B0BD),
+                    child: new Text('One click Go To First Page'),
+                  ),
+                ),
+              ),
             ),
             new GestureDetector(
-                onDoubleTap: () => Navigator.pushNamed(context, '/hello'),
-                child: new Container(
-                    alignment: Alignment.center, child: new Text('''Double Click
-              Go To Hello Page '''))),
+              onTap: () => Navigator.pushNamed(context, '/imageView'),
+              child: new Container(
+                decoration: new BoxDecoration(
+                  image: new DecorationImage(
+                      image: new AssetImage('assets/images/damlasulogo.png'),
+                      fit: BoxFit.cover),
+                ),
+                alignment: Alignment.bottomCenter,
+                child: new Transform(
+                  alignment: Alignment.bottomCenter,
+                  transform: new Matrix4.skewY(0.0)..rotateZ(0),
+                  child: new Container(
+                    padding: EdgeInsets.all(8),
+                    color: Color(0xFFA4B0BD),
+                    child: new Text('One click Go To First Page'),
+                  ),
+                ),
+              ),
+            ),
             new GestureDetector(
-              onLongPress: () => Navigator.pushNamed(context, '/WithState'),
+              onDoubleTap: () => Navigator.pushNamed(context, '/hello'),
+              child: new Container(
+                alignment: Alignment.center,
+                child: new Text('''Double Click
+              Go To Hello Page '''),
+              ),
+            ),
+            new GestureDetector(
+              onLongPress: () => Navigator.pushNamed(context, '/ToastSample'),
               child: new Container(
                 alignment: Alignment.center,
                 child: new Text('''Long Click
@@ -69,11 +94,17 @@ class ScaffoldBasics extends StatelessWidget {
         currentIndex: 0,
         items: [
           new BottomNavigationBarItem(
-              icon: new Icon(Icons.add), title: new Text("Add")),
+            icon: new Icon(Icons.add),
+            title: new Text("Add"),
+          ),
           new BottomNavigationBarItem(
-              icon: new Icon(Icons.delete), title: new Text("Delete")),
+            icon: new Icon(Icons.delete),
+            title: new Text("Delete"),
+          ),
           new BottomNavigationBarItem(
-              icon: new Icon(Icons.update), title: new Text("Update")),
+            icon: new Icon(Icons.update),
+            title: new Text("Update"),
+          ),
         ],
         onTap: (int index) {
           switch (index) {
