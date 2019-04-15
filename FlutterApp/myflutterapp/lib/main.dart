@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './screens/sharedSettings.dart';
 import './screens/toastMessage.dart';
 import './screens/imageViews.dart';
 import './screens/rows.dart';
@@ -19,7 +20,8 @@ void main() {
       '/WithState': (context) => new WithState(),
       '/imageView': (context) => new ImageViews(),
       '/ToastSample': (context) => new ToastSample(),
-      '/AlertText':(context)=>new AlertTextField(),
+      '/AlertText': (context) => new AlertTextField(),
+      '/SharedSettings': (context) => new SharedSettings(),
     },
   ));
 }

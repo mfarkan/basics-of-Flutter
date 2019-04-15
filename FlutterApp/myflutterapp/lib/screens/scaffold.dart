@@ -86,6 +86,16 @@ class ScaffoldBasics extends StatelessWidget {
                 child: new Text('''Long Click
               Go To WithState Page'''),
               ),
+            ),
+            new Card(
+              child: new GestureDetector(
+                onDoubleTap: () => Navigator.pushNamed(context, '/SharedSettings'),
+                child: new Container(
+                  alignment: Alignment.center,
+                  child: new Text('''Double Click
+              Go To Shared Page '''),
+                ),
+              ),
             )
           ],
         ),
