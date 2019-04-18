@@ -89,14 +89,23 @@ class ScaffoldBasics extends StatelessWidget {
             ),
             new Card(
               child: new GestureDetector(
-                onDoubleTap: () => Navigator.pushNamed(context, '/SharedSettings'),
+                onDoubleTap: () =>
+                    Navigator.pushNamed(context, '/SharedSettings'),
                 child: new Container(
                   alignment: Alignment.center,
                   child: new Text('''Double Click
               Go To Shared Page '''),
                 ),
               ),
-            )
+            ),
+            new GestureDetector(
+              onDoubleTap: () => Navigator.pushNamed(context, '/FileMaker'),
+              child: new Container(
+                alignment: Alignment.center,
+                child: new Text('''Double Click
+              Go To FileMaker Page '''),
+              ),
+            ),
           ],
         ),
       ),

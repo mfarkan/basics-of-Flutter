@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './screens/fileMaker.dart';
 import './screens/sharedSettings.dart';
 import './screens/toastMessage.dart';
 import './screens/imageViews.dart';
@@ -22,6 +23,9 @@ void main() {
       '/ToastSample': (context) => new ToastSample(),
       '/AlertText': (context) => new AlertTextField(),
       '/SharedSettings': (context) => new SharedSettings(),
+      '/FileMaker': (context) => new FileMaker(
+            fileOutput: new FileOutput(),
+          ),
     },
   ));
 }
