@@ -106,6 +106,14 @@ class ScaffoldBasics extends StatelessWidget {
               Go To FileMaker Page '''),
               ),
             ),
+            new GestureDetector(
+              onDoubleTap: () => Navigator.pushNamed(context, '/HttpBasics'),
+              child: new Container(
+                alignment: Alignment.center,
+                child: new Text('''Double Click
+              Go To httpBasics Page '''),
+              ),
+            ),
           ],
         ),
       ),
