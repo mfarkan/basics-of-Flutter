@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../specialWidgets/homePageCard.dart';
 
 class ScaffoldBasics extends StatelessWidget {
   final _bgColor = const Color(0xFFA4B0BD);
@@ -114,6 +115,15 @@ class ScaffoldBasics extends StatelessWidget {
               Go To httpBasics Page '''),
               ),
             ),
+            new GestureDetector(
+              onDoubleTap: () => Navigator.pushNamed(context, '/FlashLight'),
+              child: new Container(
+                alignment: Alignment.center,
+                child: new Text('''Double Click
+              Go To flashLight Page '''),
+              ),
+            ),
+            HomePageCard('/HttpBasics', 'HttpHeader Page'),
           ],
         ),
       ),

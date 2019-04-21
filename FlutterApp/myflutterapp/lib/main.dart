@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './screens/flashLight.dart';
 import './screens/fileMaker.dart';
 import './screens/sharedSettings.dart';
 import './screens/toastMessage.dart';
@@ -29,6 +30,7 @@ void main() {
               fileOutput: new FileOutput(),
             ),
         '/HttpBasics': (context) => new HttpBasics(),
+        '/FlashLight': (context) => new FlashLight(),
       },
     ),
   );
